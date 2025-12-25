@@ -11,7 +11,7 @@ st.write(
 )
 
 # ===================== LOAD DATA =====================
-@st.cache_data
+@st.cache_resource
 def load_data():
     df = pd.read_csv("program_ratings.csv") 
     return df
