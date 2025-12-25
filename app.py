@@ -126,11 +126,12 @@ def run_and_display(trial_name, co_r, mut_r):
         final_schedule = best_schedule[:len(time_slots)]
 
     st.subheader(f"{trial_name}")
-    st.success(f"CO_R = {co_r} | MUT_R = {mut_r} | Total Rating = {score}")
+    st.success(f"CO_R = {co_r} | MUT_R = {mut_r} | Fitness Score = {score}")
 
     result = pd.DataFrame({
         "Time Slot": time_slots,
         "Program": final_schedule
+        "Fitness Score": [score]*len(time_slots)
     })
 
     st.table(result)
