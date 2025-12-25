@@ -11,13 +11,11 @@ st.write(
 )
 
 # ===================== LOAD DATA =====================
-st.cache_data.clear()
+@st.cache_data
 def load_data():
-    import os
-st.write("Files:", os.listdir())
-    df = pd.read_csv("program_ratings.csv")
+    df = pd.read_csv("program ratings.csv") 
     return df
-
+    
 df = load_data()
 
 st.subheader("📊 Program Ratings Dataset")
