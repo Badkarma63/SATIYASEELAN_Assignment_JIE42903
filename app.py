@@ -13,6 +13,8 @@ st.write(
 # ===================== LOAD DATA =====================
 st.cache_data.clear()
 def load_data():
+    import os
+st.write("Files:", os.listdir())
     df = pd.read_csv("program_ratings.csv")
     return df
 
